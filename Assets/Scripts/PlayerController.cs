@@ -66,9 +66,13 @@ public class PlayerController : MonoBehaviour
         rotationPlayer(-_BtnManivela2.input);
         movimentPlayer(_BtnRun.input );
         checkLife();
+        if(currentLife == 0){
+           anim.SetInteger("statusLife", 0);
+            Destroy(gameObject);
+            GameManager.LoadsTheNextsScene("EndGame");
+        }
     }
     void checkLife(){
-        Debug.Log(currentLife);
         if(currentLife <= 0.9f){
             anim.SetInteger("statusLife", 60);
         }
@@ -77,11 +81,6 @@ public class PlayerController : MonoBehaviour
         }
         else if(currentLife <= 0.3f){
            anim.SetInteger("statusLife", 20); 
-        }
-        else if(currentLife == 0){
-           anim.SetInteger("statusLife", 0);
-            Destroy(gameObject);
-            GameManager.LoadsTheNextsScene("EndGame");
         }
     }
     void callShoot1ParametersTriplo1(){

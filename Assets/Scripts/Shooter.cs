@@ -42,6 +42,10 @@ public class Shooter : MonoBehaviour
 
     void Update()
     {
+        if(currentLife <= 0f){
+           anim.SetInteger("status", 0);
+            Destroy(gameObject);
+        }
         checkLife();
         // if (currentPosIndex < positions.Count && positions[currentPosIndex] != null)
         // {
@@ -79,12 +83,7 @@ public class Shooter : MonoBehaviour
         }
         else if(currentLife <= 1f){
             anim.SetInteger("status", 40);
-        }
-        else if(currentLife <= 0f){
-           anim.SetInteger("status", 0);
-            Destroy(gameObject);
-        }
-        
+        } 
     }
 
     void callShoot(){

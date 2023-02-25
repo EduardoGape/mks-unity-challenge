@@ -18,13 +18,15 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        timeInit =+ Time.deltaTime;
-        if (Time.time - timeInit >= DurationGame * 60 && !EndGame)
+        if (SceneManager.GetActiveScene().name.StartsWith("Game"))
         {
-            LoadsTheNextsScene("EndGame");
-            EndGame = true;
+            timeInit =+ Time.deltaTime;
+            if (Time.time - timeInit >= DurationGame * 60 && !EndGame)
+            {
+                LoadsTheNextsScene("EndGame");
+                EndGame = true;
+            }
         }
-        
     }
     
     

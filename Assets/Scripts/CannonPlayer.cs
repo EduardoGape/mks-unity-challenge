@@ -31,7 +31,7 @@ public class CannonPlayer : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Chanser" || collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Shooter")
         {
             DestroyCannon();
         }

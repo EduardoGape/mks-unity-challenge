@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7101625518082563537}
   - component: {fileID: 9143720284377553751}
   - component: {fileID: 7207417210599635804}
+  - component: {fileID: -1572877850053570010}
   m_Layer: 0
   m_Name: CannonBallPlayer
   m_TagString: CannonPlayer
@@ -100,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 8572651511660785060, guid: 176089d914f0ede4cb0a6c85c80941bf, type: 3}
-  speed: 1
+  speed: 0.4
 --- !u!58 &9143720284377553751
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -130,6 +131,27 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00038003922, y: 0}
   serializedVersion: 2
-  m_Radius: 0.05
+  m_Radius: 0.05797847
+--- !u!50 &-1572877850053570010
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8841705989858520477}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
